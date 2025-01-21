@@ -231,9 +231,9 @@ const Dashboard: React.FC = () => {
                     chatWith.map((ele: any, index: number) => (
                       <div key={index} className={`message ${ele.received ? 'received-message' : 'send-message'}`}>
                         {ele.received ? (
-                          <p>{ele.received}</p>
+                          <p className='right-overlay-panel-p'>{ele.received}</p>
                         ) : (
-                          <p>{ele.send}</p>
+                          <p className='right-overlay-panel-p'>{ele.send}</p>
                         )}
                       </div>
                     ))

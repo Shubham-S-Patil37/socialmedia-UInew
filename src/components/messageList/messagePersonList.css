@@ -2,10 +2,11 @@
   display: flex;
   justify-content: center;
   width: 10%;
-  background: #c2c2c2;
+  background: #ffffff;
   height: 100%;
   padding-top: 4%;
   box-sizing: border-box;
+  border-right: 2px solid black;
 }
 
 .messagePersonList-ul {

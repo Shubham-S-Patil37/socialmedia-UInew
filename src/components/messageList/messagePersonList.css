@@ -1,0 +1,33 @@
+.messagePersonList-parent {
+  display: flex;
+  justify-content: center;
+  width: 10%;
+  background: #c2c2c2;
+  height: 100%;
+  padding-top: 4%;
+  box-sizing: border-box;
+}
+
+.messagePersonList-ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  gap: 1rem;
+}
+
+.messagePersonList-li {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.messagePersonList-li:hover {
+  /* background: #fff */
+}

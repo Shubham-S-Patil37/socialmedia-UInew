@@ -19,14 +19,14 @@ const apiService = {
           'Content-Type': 'application/json',
         },
       })
-      debugger
+
       if (response)
         return { "status": true, "data": response.data }
 
       return { "status": false, "message": "Unable to create user" }
     }
     catch (error: any) {
-      debugger
+
       console.log(error)
       const data = error.response.data
       return { "status": false, "message": data.message }
@@ -42,14 +42,14 @@ const apiService = {
           'Content-Type': 'application/json',
         },
       })
-      debugger
+
       if (response)
         return { "status": true, "data": response.data }
 
       return { "status": false, "message": response.message }
     }
     catch (error: any) {
-      debugger
+
       console.log(error)
       return { "status": false, "message": error.message }
     }

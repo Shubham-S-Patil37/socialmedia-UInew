@@ -29,11 +29,8 @@ const Dashboard: React.FC = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [chatWith, setChatWith] = useState<any>([]);
   const [newMessage, setNewMessage] = useState("");
+
   const navigate = useNavigate();
-
-  type ChatName = "John" | "Jane" | "Alice" | "Bob"; // List all possible keys
-  type ChatMessage = { received: string } | { send: string };
-
   const names = ["John", "Jane", "Alice", "Bob"];
 
   const messages: any = {
@@ -144,19 +141,12 @@ const Dashboard: React.FC = () => {
     const confirmed = window.confirm("Are you sure you want to deactivate your account ?");
 
     if (confirmed) {
-      debugger
       const resp = await apiService.deactivateMyAccount()
-      debugger
       alert("Your account has been deactivated.")
       navigate("/login")
     }
 
 
-  }
-
-  const onChat_Change = (chatWIthName: string): ChatMessage[] => {
-    const allChat = messages[chatWIthName];
-    return allChat;
   }
 
   const onChatChange = (name: string) => {
@@ -252,11 +242,16 @@ const Dashboard: React.FC = () => {
                   )
                 }
               </div>
-
-              <div className="send-message-container">
-                <input type="text" value={newMessage} onChange={(e) => setNewMessage(e.target.value)} placeholder="Type a message" />
-                <button onClick={handleSendMessage}>Send</button>
-              </div>
+              {
+                Array.isArray(chatWith) && chatWith.length > 0 ? (
+                  <div className="send-message-container">
+                    <input type="text" value={newMessage} onChange={(e) => setNewMessage(e.target.value)} placeholder="Type a message" />
+                    <button onClick={handleSendMessage}>Send</button>
+                  </div>
+                ) : (
+                  <></>
+                )
+              }
             </div>
           ) : menuSelected === "Setting" ? (
             <div className="settings-container">

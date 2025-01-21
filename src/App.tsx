@@ -1,7 +1,6 @@
-import { useState } from 'react'
+
 import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
 import './App.css'
-import apiService from './services/apiServices';
 import Home from './pages/home';
 import LogIn from './pages/login';
 import Dashboard from './pages/dashbord';
@@ -10,9 +9,7 @@ import Dashboard from './pages/dashbord';
 
 function App() {
 
-  const data = () => {
-    apiService.signUp()
-  }
+
   return (
     <BrowserRouter>
       <Routes>

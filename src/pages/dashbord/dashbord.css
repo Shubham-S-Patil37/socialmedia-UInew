@@ -414,19 +414,21 @@ p {
 
 .send-message-container {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: end;
   padding: 10px;
+  flex-direction: column;
 }
 
 .send-message-container input {
-  width: 80%;
+  width: 100%;
   padding: 8px;
   border-radius: 4px;
   border: 1px solid #ccc;
 }
 
 .send-message-container button {
-  width: 15%;
+  width: 100%;
   padding: 8px;
   background-color: #4CAF50;
   color: white;
